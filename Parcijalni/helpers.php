@@ -35,6 +35,15 @@ function faktorijel($n) {
 }
 
 function uBinarni($n) {
-    return "Binarni oblik: " . decbin($n);
+    $rezultat = "";
+
+    while ($n > 0) {
+        $ostatak = $n % 2;
+        $rezultat = $ostatak . $rezultat;
+        $n = floor($n / 2);
+    }
+
+    return $rezultat;
+}
 }
 ?>
